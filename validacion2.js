@@ -6,14 +6,14 @@ class ValidacionEstudiante {
     this.programa = programa;
   }
 
-  validarNombre() {
+  validarnombre() {
     if (this.nombre === "") {
       return "El nombre es obligatorio";
     }
     return "";
   }
 
-  validarEmail() {
+  validaremail() {
     if (this.email === "") {
       return "El email es obligatorio";
     }
@@ -23,7 +23,7 @@ class ValidacionEstudiante {
     return "";
   }
 
-  validarEdad() {
+  validaredad() {
     if (this.edad === "") {
       return "La edad es obligatoria";
     }
@@ -33,7 +33,7 @@ class ValidacionEstudiante {
     return "";
   }
 
-  validarPrograma() {
+  validarprograma() {
     if (this.programa === "") {
       return "El programa es obligatorio";
     }
@@ -47,7 +47,7 @@ document.getElementById("registroForm").addEventListener("submit", function(e)
     //capturar datos
 
     let nombre = document.getElementById("nombre").value;
-    let email = document.getElementById("correo").value;
+    let email = document.getElementById("email").value;
     let edad = document.getElementById("edad").value;
     let programa = document.getElementById("programa").value;
 
@@ -68,7 +68,7 @@ document.getElementById("registroForm").addEventListener("submit", function(e)
     document.getElementById("errorprograma").innerHTML = errorprograma;
 
     //si no hay errores
-    if(errornombre == "" && erroremail == "" && erroredad == "" && errorprograma == "")
+    if(errornombre === "" && erroremail === "" && erroredad === "" && errorprograma === "")
     {
         document.getElementById("mensaje").innerHTML = "Registro exitoso";
     }
